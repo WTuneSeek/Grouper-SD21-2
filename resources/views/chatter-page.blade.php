@@ -28,6 +28,9 @@
                             </div>
                         </div>
                         <div class="w-full p-8 overflow-y-auto">
+                            <div class="text-2xl font-bold pb-4">
+                                <span>Blog</span>
+                            </div>
                             <div>
                                 <x-chatBubbleLeft></x-chatBubbleLeft>
                                 <x-chatBubbleRight></x-chatBubbleRight>

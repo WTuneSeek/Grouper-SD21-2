@@ -75,12 +75,13 @@
                 </svg>
             </div>
             <div class="topText text-white w-full text-center pb-40 lg:p-0 lg:pb-12">
-                <h2 class="py-4 pb-28 text-6xl lg:py-2 lg:pb-16 lg:text-4xl">Welcome to Grouper</h2>
+                <h2 class="py-4 text-6xl lg:py-2 lg:text-4xl">Welcome to Grouper</h2>
+                <h2 class="py-4 pb-28 text-6xl lg:py-2 lg:pb-16 lg:text-4xl">{{$user->name}}</h2>
             </div>
-            <a class="continueButton bg-slate-700 text-6xl font-bold p-24 rounded-3xl text-white w-fit m-auto sm:p-16 sm:text-4xl lg:p-8 lg:font-light" href="{{url('group-page')}}">
+            <a class="continueButton bg-slate-700 text-6xl font-bold p-24 rounded-3xl text-white w-fit m-auto sm:p-16 sm:text-4xl lg:p-8 lg:font-light" @auth href="{{url('group-page')}}" @endauth @guest href="{{url('login')}}" @endguest>
                 Check Groups
             </a>
-            <a class="chatterButton w-fit p-6 m-auto" href="{{url('chatter-page')}}">
+            <a class="chatterButton w-fit p-6 m-auto" @auth href="{{url('chatter-page')}}" @endauth @guest href="{{url('login')}}" @endguest >
                 <svg width="58" height="50" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M23.95 0.780029H2.85999C1.74437 0.780029 0.840027 1.68437 0.840027 2.79999V15.62C0.840027 16.7356 1.74437 17.64 2.85999 17.64H23.95C25.0656 17.64 25.97 16.7356 25.97 15.62V2.79999C25.97 1.68437 25.0656 0.780029 23.95 0.780029Z" fill="#475569" stroke="#475569" stroke-miterlimit="10"/>
                     <path d="M7.12 4.88L13.23 9.34003L19.68 4.91003" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
