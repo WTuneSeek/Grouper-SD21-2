@@ -23,8 +23,8 @@ Route::get('/chatter-page', function () {
     return view('chatter-page');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard', [
+Route::get('/', function () {
+    return view('/', [
         'users' => User::all(),
     ]);
 })->middleware(['auth'])->name('dashboard');

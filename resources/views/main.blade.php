@@ -76,7 +76,7 @@
             </div>
             <div class="topText text-white w-full text-center pb-40 lg:p-0 lg:pb-12">
                 <h2 class="py-4 text-6xl lg:py-2 lg:text-4xl">Welcome to Grouper</h2>
-                <h2 class="py-4 pb-28 text-6xl lg:py-2 lg:pb-16 lg:text-4xl">{{$user->name}}</h2>
+                @auth<h2 class="py-4 pb-28 text-6xl lg:py-2 lg:pb-16 lg:text-4xl">{{$user->name}}</h2>@endauth
             </div>
             <a class="continueButton bg-slate-700 text-6xl font-bold p-24 rounded-3xl text-white w-fit m-auto sm:p-16 sm:text-4xl lg:p-8 lg:font-light" @auth href="{{url('group-page')}}" @endauth @guest href="{{url('login')}}" @endguest>
                 Check Groups
